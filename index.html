@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APOD</title>
+    <link rel="stylesheet" href="./diko.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body class="bg2">
+    <img
+      src=""
+      alt=""
+      class="dh100h dfblur10 dposa dt0 dl0 w-100 dopa2 dz-1"
+      id="bg-img"
+    />
+
+    <section class="hero py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 dflex djcsb">
+            <h2 class="t1">APOD Search</h2>
+            <div class="dw-fit t1 dflex dalc">
+              <h6 class="pe-2 m-0">Date:</h6>
+              <div class="dbor10 bgf5 shadow p-2">
+                <input type="date" id="date-input" class="bgt dborn doutn t1" />
+                <button
+                  class="dbtn1 rounded bg1 t2 doutn dborn px-2"
+                  title="search"
+                  id="submit"
+                >
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="h-100 col-12 p-3">
+            <div
+              class="w-100 dposr center-main shadow dbor10 doverh t1"
+              id="center-main"
+            >
+              <img
+                src=""
+                alt=""
+                class="dbor10 w-100 h-100 bgf5"
+                id="center-img"
+              />
+              <div
+                class="contents p-3 dflex dfdc justify-content-end dposa dl0 dt0 w-100 h-100"
+              >
+                <div class="dflex mb-1">
+                  <button
+                    class="dbtn1 rounded bg1 t2 doutn dborn px-2"
+                    title="add to favorites"
+                    id="favourite"
+                    data-url=""
+                  >
+                    <i class="fas fa-heart"></i>
+                    <span>+</span>
+                  </button>
+                </div>
+                <h4 id="center-title"></h4>
+                <p id="center-story" class="dopa8"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="favourites">
+      <div class="container">
+        <div class="row">
+          <h2 class="t1"><b>Favourites</b></h2>
+        </div>
+        <div class="row" id="favourites-container">
+          <div class="col-12 p-3 col-sm-6 p-sm-2 col-md-4 col-lg-3">
+            <div class="fav-card dbor10 doverh shadow dposr">
+              <img src="" alt="" class="w-100 h-100" />
+              <div class="dposa dl0 dt0 h-100 w-100 dflex dfdc djcsb t1 p-2">
+                <div class="">
+                  <button
+                    class="dbtn1 rounded bg1 t2 doutn dborn px-2"
+                    title="remove from favorites"
+                    id="favourite"
+                    data-url=""
+                  >
+                    <i class="fas fa-heart"></i>-
+                  </button>
+                </div>
+                <h6>Hello Title</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="./index.js"></script>
+</html>

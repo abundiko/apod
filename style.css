@@ -1,0 +1,19 @@
+.center-main{
+  height: 70vh;
+  cursor: pointer;
+}
+.center-main .contents{
+  background-image: linear-gradient(to top, #000000aa, #00000000);
+}
+.center-main:hover .contents{
+  /* opacity: 0; */
+  background-image: linear-gradient(to top, #00000000, #00000000);
+  /* transform: translateY(100px); */
+}
+.center-main:hover p{
+  height: 0 !important;
+  overflow: hidden;
+}
+.fav-card{
+  height: 40vh;
+}
