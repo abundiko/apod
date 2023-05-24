@@ -1,14 +1,12 @@
 .center-main{
-  height: 70vh;
+  height: 80vh;
   cursor: pointer;
 }
-.center-main .contents{
-  background-image: linear-gradient(to top, #000000aa, #00000000);
+.center-main .contents, .fav-card .contents{
+  background-image: linear-gradient(to top, #000000, #00000000);
 }
 .center-main:hover .contents{
-  /* opacity: 0; */
   background-image: linear-gradient(to top, #00000000, #00000000);
-  /* transform: translateY(100px); */
 }
 .center-main:hover p{
   height: 0 !important;
@@ -16,4 +14,27 @@
 }
 .fav-card{
   height: 40vh;
+  cursor: pointer;
+}
+.pop{
+  left: 50%;
+  transform: translateX(-50%);
+  top: -200px;
+  width: clamp(300px, 50vw, 500px);
+  z-index: 5;
+}
+
+.pop.show{
+  top: 50px;
+  box-shadow: 0 0 30px 10000px #000000aa;
+}
+.app-modal .backdrop{
+  cursor: not-allowed;
+}
+.app-modal.hide{
+  top: 110vh;
+}
+.app-modal .image-main{
+  height: 95vh;
+  width: 95vw;
 }

@@ -16,15 +16,40 @@
     <img
       src=""
       alt=""
-      class="dh100h dfblur10 dposa dt0 dl0 w-100 dopa2 dz-1"
+      class="dh100h dfblur10 dposf dt0 dl0 w-100 dopa2 dz-1"
       id="bg-img"
     />
+
+    <section
+      class="app-modal hide dposf dl0 dt0 h-100 w-100 dz2"
+      id="app-modal"
+    >
+      <div
+        class="dposa w-100 dl0 dt0 h-100 backdrop bg04 dbblur20"
+        onclick="document.querySelector('#app-modal').classList.add('hide')"
+      ></div>
+      <img class="dposa dtransform-center image-main bg0" id="modal-image" />
+    </section>
+
+    <section
+      class="pop dposf dbor10 dshadow p-2 bg01 text-center dbblur10 tf dflex"
+    >
+      <p class="w-100">This is a message</p>
+
+      <button
+        class="dbtn1 rounded bg1 t2 doutn dborn px-2"
+        title="dismiss"
+        onclick="hideMessage()"
+      >
+        ok
+      </button>
+    </section>
 
     <section class="hero py-5">
       <div class="container">
         <div class="row">
-          <div class="col-12 dflex djcsb">
-            <h2 class="t1">APOD Search</h2>
+          <div class="col-12 dflex flex-wrap djcsb">
+            <h2 class="t1 col-12 col-md-5"><b>APOD Search</b></h2>
             <div class="dw-fit t1 dflex dalc">
               <h6 class="pe-2 m-0">Date:</h6>
               <div class="dbor10 bgf5 shadow p-2">
@@ -75,28 +100,21 @@
     <section class="favourites">
       <div class="container">
         <div class="row">
-          <h2 class="t1"><b>Favourites</b></h2>
-        </div>
-        <div class="row" id="favourites-container">
-          <div class="col-12 p-3 col-sm-6 p-sm-2 col-md-4 col-lg-3">
-            <div class="fav-card dbor10 doverh shadow dposr">
-              <img src="" alt="" class="w-100 h-100" />
-              <div class="dposa dl0 dt0 h-100 w-100 dflex dfdc djcsb t1 p-2">
-                <div class="">
-                  <button
-                    class="dbtn1 rounded bg1 t2 doutn dborn px-2"
-                    title="remove from favorites"
-                    id="favourite"
-                    data-url=""
-                  >
-                    <i class="fas fa-heart"></i>-
-                  </button>
-                </div>
-                <h6>Hello Title</h6>
-              </div>
-            </div>
+          <div class="dflex djcsb">
+            <h4 class="t1">
+              <b>Favourites</b>
+            </h4>
+            <button
+              class="dbtn1 rounded bg1 t2 doutn dborn px-2"
+              title="remove all favorites"
+              onclick="clearFavourites();"
+            >
+              <i class="fas fa-trash"></i>Clear
+            </button>
           </div>
         </div>
+        <div class="row" id="favourites-container"></div>
+        <div class="py-3"></div>
       </div>
     </section>
   </body>
